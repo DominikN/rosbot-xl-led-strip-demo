@@ -69,3 +69,13 @@ Open a terminal in ROSbot XL and run:
 ```bash
 just flash
 ```
+
+You should see a rainbow animation on the LED strip.
+
+## Running teleop
+
+You can also drive the robot around manually with:
+
+```bash
+just teleop
+```
