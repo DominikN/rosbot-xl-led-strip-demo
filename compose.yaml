@@ -1,0 +1,17 @@
+name: led
+services:
+
+  rosbot:
+    image: husarion/rosbot-xl:humble-0.10.0-20240216
+    # devices:
+    #   - /dev/ttyUSBDB # just for firmware flashing
+    #   - /dev/bus/usb/ # just for firmware flashing
+    ports:
+      - 192.168.77.2:8888:8888/udp
+    command: >
+      ros2 launch /husarion_utils/rosbot.launch.py
+        mecanum:=${MECANUM:-True}
+
+  led_strip_publisher:
+    build: .
+    command: ros2 run led_strip_publisher led_strip_publisher
