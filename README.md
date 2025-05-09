@@ -67,7 +67,7 @@ just flash
 Open a terminal in ROSbot XL and run:
 
 ```bash
-just flash
+just start
 ```
 
 You should see a rainbow animation on the LED strip.
